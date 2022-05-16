@@ -3,15 +3,15 @@ import Image from 'next/image';
 import { Button, Typography } from '@mui/material';
 
 // >> Styles
-import useStyles from './whyCrappoStyle.js';
+import useStyles from './cryptosStyle.js';
 
 // >> Images
-import leftSectionImage from '../../../public/indexPage/whyCrappo/leftSectionImage.png';
-import bgU from '../../../public/indexPage/whyCrappo/bgU.png';
-import bgD from '../../../public/indexPage/whyCrappo/bgD.png';
-import BarChartRoundedIcon from '@mui/icons-material/BarChartRounded';
-import PersonRoundedIcon from '@mui/icons-material/PersonRounded';
-import PublicIcon from '@mui/icons-material/Public';
+import bitcoin from '../../../../public/indexPage/trade/bitcoin.svg';
+import litecoin from '../../../../public/indexPage/trade/litecoin.svg';
+import ethereum from '../../../../public/indexPage/trade/ethereum.svg';
+
+// >> Components
+import OneBlock from './oneCryptoBlock/oneBlock.js';
 
 //Script
 function WhyCrappo() {
@@ -21,86 +21,28 @@ function WhyCrappo() {
 	// >> Render
 	return (
 		<div className={styles.mainDiv}>
-			<div className={styles.topStripeDiv}></div>
-			<div className={styles.bgD}>
-				<Image
-					src={bgD}
-					alt=""
-					layout="responsive"
-					objectFit="contain"
-					quality="100"
+			<Typography className={styles.mainTitle}>
+				Trade securely and market the high growth cryptocurrencies.
+			</Typography>
+			<div className={styles.blocksDiv}>
+				<OneBlock
+					cryptoLogo={bitcoin}
+					cryptoName="Bitcoin"
+					cryptoShortName="BTC"
+					cryptoDesc="Digital currency in which a record of transactions is maintained."
 				/>
-			</div>
-			<div className={styles.bgU}>
-				<Image
-					src={bgU}
-					alt=""
-					layout="responsive"
-					objectFit="contain"
-					quality="100"
+				<OneBlock
+					cryptoLogo={ethereum}
+					cryptoName="Ethereum"
+					cryptoShortName="ETH"
+					cryptoDesc="Blockchain technology to create and run decentralized digital applications."
 				/>
-			</div>
-			<div className={styles.topElements}>
-				<div className={styles.topOneElement}>
-					<div className={styles.topElementIconDiv}>
-						<BarChartRoundedIcon
-							className={styles.topElementIcon}
-						/>
-					</div>
-					<Typography className={styles.topElementTitle}>
-						$30B
-					</Typography>
-					<Typography className={styles.topElementDesc}>
-						Digital Currency Exchanged
-					</Typography>
-				</div>
-				<div className={styles.topOneElement}>
-					<div className={styles.topElementIconDiv}>
-						<PersonRoundedIcon className={styles.topElementIcon} />
-					</div>
-					<Typography className={styles.topElementTitle}>
-						10M+
-					</Typography>
-					<Typography className={styles.topElementDesc}>
-						Trusted Wallets Investor
-					</Typography>
-				</div>
-				<div className={styles.topOneElement}>
-					<div className={styles.topElementIconDiv}>
-						<PublicIcon className={styles.topElementIcon} />
-					</div>
-					<Typography className={styles.topElementTitle}>
-						195
-					</Typography>
-					<Typography className={styles.topElementDesc}>
-						Countries Supported
-					</Typography>
-				</div>
-			</div>
-			<div className={styles.leftSection}>
-				<Image
-					src={leftSectionImage}
-					alt=""
-					layout="responsive"
-					objectFit="contain"
-					priority={true}
-					quality="100"
+				<OneBlock
+					cryptoLogo={litecoin}
+					cryptoName="Litecoin"
+					cryptoShortName="LTC"
+					cryptoDesc="Cryptocurrency that enables instant payments to anyone in the world."
 				/>
-			</div>
-			<div className={styles.rightSection}>
-				<Typography className={styles.rightSectionTitle}>
-					Why you should choose CRAPPO
-				</Typography>
-				<Typography className={styles.rightSectionDesc}>
-					Experience the next generation cryptocurrency platform. No
-					financial borders, extra fees, and fake reviews.
-				</Typography>
-				<Button
-					variant="contained"
-					className={styles.rightSectionButton}
-				>
-					<Typography>Learn More</Typography>
-				</Button>
 			</div>
 		</div>
 	);

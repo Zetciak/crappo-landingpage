@@ -29,6 +29,30 @@ const useStyles = makeStyles({
 		top: '457px',
 		minHeight: '1033px',
 	},
+
+	features: {
+		width: '100%',
+		minHeight: '1874px',
+		background: '#2B076E',
+		zIndex: '5',
+		position: 'relative',
+	},
+
+	startMining: {
+		width: '100%',
+		minHeight: '392px',
+		background: 'linear-gradient(180deg, #2B076E 0%, #0D0D2B 100%)',
+		zIndex: '4',
+		position: 'relative',
+	},
+
+	footer: {
+		width: '100%',
+		minHeight: '552px',
+		background: '#0D0D2B',
+		zIndex: '5',
+		position: 'relative',
+	},
 });
 
 export default useStyles;

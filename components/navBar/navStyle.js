@@ -5,7 +5,7 @@ import { makeStyles } from '@mui/styles';
 const useStyles = makeStyles({
 	mainDiv: {
 		width: '1202px',
-		height: '52px',
+		minHeight: '52px',
 		margin: '0 auto',
 		paddingTop: '60px',
 	},
